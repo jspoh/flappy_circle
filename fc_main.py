@@ -112,8 +112,6 @@ class Game(object):
         self.difficulty = 0
 
     def difficulty_screen(self):
-        global diff
-
         select_difficulty = font.render("DIFFICULTY", True, c_white)
         easy = med_font.render("EASY", True, c_white)
         med = med_font.render("MEDIUM", True, c_white)
@@ -140,11 +138,14 @@ class Game(object):
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if mouseX in range(521, 577) and mouseY in range(15, 46):
                         sg.popup_ok("Help text:", "Press [SPACE] to flap", "", "made by JS")
-                    elif mouseX in range(66, 66+cbutton_width+1) and mouseY in range(buttonY, buttonY+cbutton_height+1):
+                    elif mouseX in range(66, 66+cbutton_width+1) and mouseY in range(
+                            buttonY, buttonY+cbutton_height+1):
                         self.difficulty = 5
-                    elif mouseX in range(238, 238+cbutton_width+1) and mouseY in range(buttonY, buttonY+cbutton_height+1):
+                    elif mouseX in range(238, 238+cbutton_width+1) and mouseY in range(
+                            buttonY, buttonY+cbutton_height+1):
                         self.difficulty = 4
-                    elif mouseX in range(410, 410+cbutton_width+1) and mouseY in range(buttonY, buttonY+cbutton_height+1):
+                    elif mouseX in range(410, 410+cbutton_width+1) and mouseY in range(
+                            buttonY, buttonY+cbutton_height+1):
                         self.difficulty = 3
                     elif mouseX in range(268, 318+1) and mouseY in range(445, 475+1):
                         if self.difficulty != 0:

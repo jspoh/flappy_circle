@@ -96,8 +96,7 @@ class Physics(object):
             elif draw.circleY-draw.radius < draw.twall_height:
                 game.over()
             elif draw.circleX > draw.wallX:
-                score += 1
-                print(score)
+                score += 0.04
 
     def gravity(self):
         if self.ballY_change < self.ball_terminal_velocity:
@@ -188,7 +187,7 @@ class Game(object):
         retry = small_font.render("Press [R] to retry", True, c_white)
 
         while True:
-            show_score = font.render(f"Score: {score}", True, c_white)
+            show_score = font.render(f"Score: {int(score)}", True, c_white)
             win.fill(c_blue)
 
             for event in pygame.event.get():
@@ -216,7 +215,7 @@ class Game(object):
 
     def play(self):
         while True:
-            show_score = font.render(f"Score: {score}", True, c_white)
+            show_score = font.render(f"Score: {int(score)}", True, c_white)
             win.fill(c_blue)
 
             for event in pygame.event.get():

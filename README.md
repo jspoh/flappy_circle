@@ -4,7 +4,11 @@
 Basic flappy bird game but it's a circle instead of a bird. I included a difficulty selection stage so that users can customize their gameplay.
 Also, I realised that I could use PySimpleGUI's popups in a pygame window, pretty cool.
 
-Might improve of this if I have nothing better to do:
-- Allow more walls to spawn in together
-- Change the circle to an actual bird icon
-- Increase the speed of the walls coming at the bird as you progress
+Screenshot of the main start screen/difficulty selection screen
+<img src='lib/main.PNG'>
+
+Screenshot of gameplay
+<img src='lib/gameplay.PNG'>
+
+Screenshot of gameover screen
+<img src='lib/gameover.PNG'>
